@@ -3,7 +3,7 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -34,9 +34,41 @@
             text-decoration: none;
         }
 
-            #buttonRegis:hover {
-                transform: scale(1.2);
+        #buttonRegis:hover {
+             transform: scale(1.2);
+        }
+
+        #form-1 {
+            display: flex;
+            justify-content: center;
+            flex-flow: row nowrap;
+        }
+
+        #row1-colum1,
+        #row1-colum2 {
+            flex: 0 0 50%;
+        }
+        #row1-colum1 img {
+            width: 100%;
+            height: 100%;
+            margin-top: 15px;
+        }
+        @media only screen and (min-device-width : 320px) and (max-device-width : 480px)  {
+            #row-1 {
+                flex-flow: column nowrap;
             }
+            #row1-colum1 img {
+                width: 290px;
+                margin-top: 0px;
+                margin-left: 50px;
+            }
+            #row1-colum2 {
+                margin-top: 50px;
+            }
+            #row1-colum2 h3{
+                font-size:20px;
+            }
+        }
     </style>
     <!--buttonReg-->
     <style>
@@ -488,12 +520,12 @@
         </div>
     </nav>
     <div class="container">
-        <div class="row" style="margin-top: 50px;">
-            <div class="col">
-                <h3 style="text-align: center; font-family: Arial; color: #009B00;">Vay tiêu dùng lãi xuất thấp</h3>
-                <img src="https://photo-cms-bizlive.zadn.vn/w1200/Uploaded/2022/spuoshu/2020_01_03/vay-tieu-dung_DQFR.jpg" alt="Vay tiêu dùng" style="width: 100%; height: 100%;margin-top:15px;">
+        <div class="row" style="margin-top: 50px;" id="row-1">
+            <div class="col" id="row1-colum1">
+                <p style="text-align: center; font-family: Arial; color: #009B00;">Vay tiêu dùng lãi Suất thấp</p>
+                <img src="https://photo-cms-bizlive.zadn.vn/w1200/Uploaded/2022/spuoshu/2020_01_03/vay-tieu-dung_DQFR.jpg" alt="Vay tiêu dùng">
             </div>
-            <div class="col">
+            <div class="col" id="row1-colum2">
                 <h3 style="text-align:center; font-family: Arial; color: #009B00;">Đăng ký tư vấn khoản vay</h3>
                 <form>
                     <div class="form-group">
